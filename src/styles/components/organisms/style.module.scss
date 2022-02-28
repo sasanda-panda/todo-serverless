@@ -1,0 +1,47 @@
+@import '../../include/variables';
+
+.navigation {
+  width: 256px;
+  position: fixed;
+  top: 96px;
+  left: calc((100vw - 1024px) / 2);
+  transition: 0.4s;
+  &_active {
+    top: 48px;
+  }
+  &_list {
+    width: 100%;
+    &_item {
+      width: 100%;
+      a {
+        padding: 24px;
+        display: block;
+        color: $color_white;
+        background-color: $color_black;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1;
+      }
+      a + a {
+        border-top: 4px solid $color_white;
+      }
+      &:first-child a {
+        border-radius: 8px 8px 0 0;
+      }
+      &:last-child a {
+        border-radius: 0 0 8px 8px;
+      }
+      &__active a {
+        color: $color_black;
+        background-color: $color_yellow;
+      }
+    }
+  }
+}
+
+.pageContainer {
+  margin: 0 0 0 304px;
+  width: 720px;
+}

@@ -1,0 +1,148 @@
+@import '../include/variables';
+
+.home {
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_body {
+    margin: 16px 0 0 0;
+  }
+}
+
+.text {
+  color: $color_black;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  &__bold {
+    font-weight: 700;
+  }
+}
+
+.filters {
+  display: flex;
+}
+
+.filter {
+  & + & {
+    margin: 0 0 0 16px;
+  }
+  button {
+    padding: 8px 16px;
+    color: $color_black;
+    background-color: $color_white;
+    border: 2px solid $color_black;
+    border-radius: 32px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  &_active > button {
+    color: $color_black;
+    background-color: $color_yellow;
+    border: 2px solid $color_yellow;
+  }
+}
+
+.new {
+  padding: 8px 16px;
+  color: $color_black;
+  background-color: $color_yellow;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.todos {
+
+}
+
+.todo {
+  margin: 0 0 16px;
+  padding: 24px;
+  color: $color_white;
+  background-color: $color_black;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  &_head {
+    width: 36px;
+    &_isdone {
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      border: 2px solid $color_yellow;
+      position: relative;
+      &::before {
+        content: "";
+        display: none;
+        width: 20px;
+        height: 8px;
+        border-left: 4px solid $color_black;
+        border-bottom: 4px solid $color_black;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        transition: 0.4s;
+      }
+      &_active {
+        background-color: $color_yellow;
+        &::before {
+          display: block;
+        }
+      }
+    }
+    &_button {
+      margin: 16px auto 0;
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-color: $color_yellow;
+      opacity: 0.5;
+    }
+  }
+  &_body {
+    width: 624px;
+    &__new {
+      width: 100%;
+    }
+    &_title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      input[type="text"] {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+    }
+    &_description {
+      margin: 14px 0 0 0;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.075em;
+      input[type="text"] {
+        margin: 2px 0 0 0;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.075em;
+      }
+    }
+  }
+  input[type="text"] {
+    padding: 4px 8px;
+    width: 100%;
+    color: $color_white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &:focus {
+      color: $color_black;
+      background-color: $color_yellow;
+    }
+    &::placeholder {
+      color: $color_gray;
+    }
+  }
+}

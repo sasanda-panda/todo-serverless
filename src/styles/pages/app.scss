@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=M+PLUS+1p:wght@400;700&display=swap');
+@import '../include/reset';
+@import '../include/variables';
+
+body {
+  background-color: $color_white;
+  font-family: 'Lato', 'M PLUS 1p', sans-serif;
+}
+
+.app {
+  margin: 0 auto;
+  padding: 96px 0;
+  width: 1024px;
+  display: flex;
+  justify-content: space-between;
+}
